@@ -15,10 +15,13 @@ public class Board {
         }
     }
 
-    void placeToken(String token, int x, int y){
-        if (isAFreePosition(x,y))
+    boolean placeToken(String token, int x, int y){
+        if (isAFreePosition(x,y)){
             positions[x][y] = token;
-   }
+            return true;
+        }
+        return false;
+    }
 
     private boolean isAFreePosition(int x, int y) {
         return ".".equals(positions[x][y]);

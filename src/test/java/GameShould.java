@@ -52,4 +52,13 @@ public class GameShould {
                 ". . . \n", game.play(1,1));
     }
 
+    @Test
+    void a_player_should_not_be_toggled_if_the_player_place_a_token_in_a_ocupied_space() {
+        game.play(1, 1);
+        game.play(1, 1);
+        assertEquals(". O . \n" +
+                ". X . \n" +
+                ". . . \n", game.play(1,2));
+    }
+
 }

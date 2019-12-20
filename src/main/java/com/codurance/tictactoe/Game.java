@@ -10,8 +10,8 @@ public class Game {
     }
 
     public String play(int x, int y) {
-        board.placeToken(currentPlayer, x, y);
-        togglePlayer();
+        if (board.placeToken(currentPlayer, x, y))
+            togglePlayer();
         return board.toString();
     }
 
