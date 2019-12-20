@@ -11,6 +11,15 @@ public class Game {
 
     public String play(int x, int y) {
         board.placeToken(currentPlayer, x, y);
+        togglePlayer();
         return board.toString();
+    }
+
+    private void togglePlayer() {
+        if ("X".equals(currentPlayer)){
+            currentPlayer = "O";
+        } else {
+            currentPlayer = "X";
+        }
     }
 }
