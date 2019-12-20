@@ -1,7 +1,7 @@
 package com.codurance.tictactoe;
 
 public class Board {
-   String[][] positions = new String[3][3];
+   private String[][] positions = new String[3][3];
 
     public Board() {
         initializeBoard();
@@ -15,9 +15,14 @@ public class Board {
         }
     }
 
-    public void placeToken(String token, int x, int y){
-       positions[x][y] = token;
+    void placeToken(String token, int x, int y){
+        if (isAFreePosition(x,y))
+            positions[x][y] = token;
    }
+
+    private boolean isAFreePosition(int x, int y) {
+        return ".".equals(positions[x][y]);
+    }
 
     @Override
     public String toString() {

@@ -43,4 +43,13 @@ public class GameShould {
                 ". X . \n" +
                 ". . . \n", game.play(1,2));
     }
+
+    @Test
+    void a_player_cannot_place_in_a_position_where_there_is_already_a_token() {
+        game.play(1, 1);
+        assertEquals(". . . \n" +
+                ". X . \n" +
+                ". . . \n", game.play(1,1));
+    }
+
 }
