@@ -4,10 +4,6 @@ public class Board {
    private String[][] positions = new String[3][3];
 
     public Board() {
-        initializeBoard();
-    }
-
-    private void initializeBoard() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 positions[i][j] = ".";
@@ -29,9 +25,9 @@ public class Board {
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        formatTable(builder);
-        return builder.toString();
+        StringBuilder output = new StringBuilder();
+        formatTable(output);
+        return output.toString();
     }
 
     private void formatTable(StringBuilder builder) {

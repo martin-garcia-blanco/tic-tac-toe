@@ -1,25 +1,26 @@
 package com.codurance.tictactoe;
 
 public class Game {
+
     private Board board;
-    private String currentPlayer;
+    private Token currentPlayer;
 
     public Game(Board board) {
         this.board = board;
-        currentPlayer = "X";
+        this.currentPlayer = new TokenX();
     }
 
     public String play(int x, int y) {
-        if (board.placeToken(currentPlayer, x, y))
+        if (board.placeToken(getCurrentPlayersToken(), x, y))
             togglePlayer();
         return board.toString();
     }
 
+    private String getCurrentPlayersToken() {
+        return currentPlayer.getSymbol();
+    }
+
     private void togglePlayer() {
-        if ("X".equals(currentPlayer)){
-            currentPlayer = "O";
-        } else {
-            currentPlayer = "X";
-        }
+        currentPlayer = currentPlayer.swapPlayer();
     }
 }

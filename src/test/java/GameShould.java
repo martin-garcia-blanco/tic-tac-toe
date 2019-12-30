@@ -1,8 +1,7 @@
-import com.codurance.tictactoe.*;
+import com.codurance.tictactoe.Board;
+import com.codurance.tictactoe.Game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -45,7 +44,7 @@ public class GameShould {
     }
 
     @Test
-    void a_player_cannot_place_in_a_position_where_there_is_already_a_token() {
+    void not_allow_a_player_to_place_in_a_position_where_there_is_already_a_token() {
         game.play(1, 1);
         assertEquals(". . . \n" +
                 ". X . \n" +
@@ -53,7 +52,7 @@ public class GameShould {
     }
 
     @Test
-    void a_player_should_not_be_toggled_if_the_player_place_a_token_in_a_ocupied_space() {
+    void not_allow_a_player_to_be_toggled_if_the_player_place_a_token_in_a_ocupied_space() {
         game.play(1, 1);
         game.play(1, 1);
         assertEquals(". O . \n" +
