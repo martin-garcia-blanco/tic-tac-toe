@@ -33,7 +33,7 @@ This is a simple game of tic tac toe, the rules are simple, given a grid of 3 by
      ```
 (Please consider all variants of this)
 
-### Optional Input/Output
+ ### Input/Output
  
  **Input**
  `Tictactoe.play(/* params */)`
@@ -46,4 +46,5 @@ This is a simple game of tic tac toe, the rules are simple, given a grid of 3 by
  .X.
  ..X
  ```
-     
+ or
+ `Player X wins`
