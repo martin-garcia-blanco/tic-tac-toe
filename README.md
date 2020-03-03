@@ -31,4 +31,19 @@ This is a simple game of tic tac toe, the rules are simple, given a grid of 3 by
      . X .
      . . X
      ```
- (Please consider all variants of this)
+(Please consider all variants of this)
+
+### Optional Input/Output
+ 
+ **Input**
+ `Tictactoe.play(/* params */)`
+ 
+ **Output**
+ Current state of the board
+ 
+ ```
+ X.. 
+ .X.
+ ..X
+ ```
+     
