@@ -43,7 +43,7 @@ This is a simple game of tic tac toe, the rules are simple, given a grid of 3 by
  
  ```
  X.. 
- .X.
+ .O.
  ..X
  ```
  or
